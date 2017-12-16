@@ -30,6 +30,18 @@ public class Question {
         _batch = batch;
     }
 
+    public String getOptionsAsHashSep(){
+        StringBuilder sb = new StringBuilder();
+        for(String o : _options){
+            sb.append(o).append("#");
+        }
+        String optionString = "";
+        if(sb.length() != 0){
+            optionString = sb.substring(0, sb.length() -1);
+        }
+        return optionString;
+    }
+
     public String getId() {
         return _id;
     }

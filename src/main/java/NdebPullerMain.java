@@ -47,7 +47,9 @@ public class NdebPullerMain {
                     "testBatch");
             questions.add(question);
         }
-        writeToFile(questions);
+//        writeToFile(questions);
+        DBWriter dw = new DBWriter();
+        dw.writeToDB("questionsdatabase", questions);
     }
 
     private void writeToFile(List<Question> questions){
